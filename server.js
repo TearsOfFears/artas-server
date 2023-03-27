@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json());
 const corsOptions = {
   origin:"https://artasshopclient.netlify.app",
-  credentials: true,
+  credentials: false,
   optionSuccessStatus: 200
 }
 app.use(cors(corsOptions));
