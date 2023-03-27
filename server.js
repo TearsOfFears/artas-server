@@ -17,12 +17,6 @@ const corsOptions = {
   credentials: true,
   optionSuccessStatus: 200
 }
-app.use(function (req, res, next) {
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Methods', 'GET,POST,PATCH, DELETE');
-  res.header('Access-Control-Allow-Headers:  Content-Type, X-Auth-Token, Authorization, Origin');
-  next();
-});
 app.use(cors(corsOptions));
 
 // API
