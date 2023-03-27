@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 const connectDatabase = async () => {
   try {
-    const conn = await mongoose.connect("mongodb+srv://artas:artas@cluster123.l4ubczc.mongodb.net/?retryWrites=true&w=majority", {
+    const conn = await mongoose.connect("mongodb+srv://artas:artas@cluster123.l4ubczc.mongodb.net", {
       useUnifiedTopology: true,
       useNewUrlParser: true,
     });
