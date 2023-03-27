@@ -12,7 +12,6 @@ dotenv.config();
 connectDatabase();
 const app = express();
 app.use(express.json());
-app.use(cors())
 const corsOptions = {
   origin:"https://artasshopclient.netlify.app",
   credentials: true,
@@ -23,6 +22,7 @@ app.use(function (req, res, next) {
   res.header('Access-Control-Allow-Headers:  Content-Type, X-Auth-Token, Authorization, Origin');
   next();
 });
+app.use(cors(corsOptions));
 
 // API
 app.use("/api/import", ImportData);
